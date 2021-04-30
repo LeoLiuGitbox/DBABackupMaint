@@ -1,10 +1,16 @@
 pipeline {
-  
+  agent none
   stages {
+      stage('Get Repository') {
+      agent {
+        node {
+          label 'master'
+        }
+
     stage('Checkout') {
       steps {
         echo 'Checkout from GetHub'
-        git 'https://github.com/LeoLiuGitbox/DBABackupMaint.git'
+        Checkout scm
       }
     }
 
