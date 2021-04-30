@@ -11,6 +11,9 @@ pipeline {
     stage('Build') {
       steps {
         powershell 'Get-Service'
+        powershell '''
+                    ./scripts/get-logins.ps1
+        ''' 
       }
     }
 
