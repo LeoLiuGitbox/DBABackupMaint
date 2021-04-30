@@ -2,7 +2,6 @@ pipeline {
   agent none
   stages {
       stage('Get Repository') {
-      agent {
         node {
           label 'master'
         }
