@@ -1,11 +1,6 @@
 pipeline {
   agent none
-  stages {
-      stage('Get Repository') {
-        node {
-          label 'master'
-        }
-
+  stages {      
     stage('Checkout') {
       steps {
         echo 'Checkout from GetHub'
