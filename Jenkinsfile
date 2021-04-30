@@ -10,7 +10,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        powershell './get-logins.ps1'
+        powershell 'Get-Service'
       }
     }
 
