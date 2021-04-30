@@ -4,7 +4,7 @@ pipeline {
     stage('Checkout') {
       steps {
         echo 'Checkout from GetHub'
-        Checkout scm
+        checkout scm
       }
     }
 
